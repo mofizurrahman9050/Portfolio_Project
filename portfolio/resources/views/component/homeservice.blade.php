@@ -1,0 +1,24 @@
+    <div class="container text-center mt-5">
+      <h1 class="section-title">সার্ভিস সমূহ </h1>
+      <!--  <h5 class="section-subtitle">আইটি কোর্স, প্রজেক্ট ভিত্তিক সোর্স কোড সহ আরো যে সকল সার্ভিস আমরা প্রদান করি </h5> -->
+      <div class="row icon-boxes">
+
+        @foreach($serviceData as $serviceData)
+       <div class="col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">        
+        <div class="card" style="width: 18rem; height: 400px;">
+
+          <img src="{{($serviceData->service_img)}}" class="card-img-top h-50" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{($serviceData->service_name)}}</h5>
+            <p class="card-text">{{($serviceData->service_des)}}</p>
+            <a href="{{('$serviceData->service_link')}}" target="_blank" class="btn btn-primary">Go somewhere</a>
+          </div>  
+        </div>
+      </div> 
+      @endforeach
+
+ 
+
+  </div>
+</div>
+
